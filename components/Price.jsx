@@ -7,7 +7,7 @@ const Price = () => {
   const router = useRouter();
   const buy = async (price) => {
     try {
-      const { data } = await axios.post("/api/checkout", {
+      const { data } = await axios.post("/api/payment", {
         name: "Buying packge of " + price.price + " USDT",
         description: price.details,
         amount: price.price,
